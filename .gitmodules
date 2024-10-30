@@ -6,3 +6,7 @@
 	path = vector
 	url = https://github.com/viaq/vector
 	branch = release-6.0
+[submodule "log-file-metric-exporter"]
+	path = log-file-metric-exporter
+	url = https://github.com/ViaQ/log-file-metric-exporter
+	branch = release-6.0
