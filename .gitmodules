@@ -1,0 +1,8 @@
+[submodule "cluster-logging-operator"]
+	path = cluster-logging-operator
+	url = https://github.com/jcantrill/cluster-logging-operator
+	branch = release-6.0
+[submodule "vector"]
+	path = vector
+	url = https://github.com/viaq/vector
+	branch = release-6.0
