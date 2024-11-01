@@ -1,0 +1,12 @@
+[submodule "log-collection/log-file-metric-exporter"]
+	path = log-collection/log-file-metric-exporter
+	url = https://github.com/ViaQ/log-file-metric-exporter
+	branch = release-6.0
+[submodule "log-collection/vector"]
+	path = log-collection/vector
+	url = https://github.com/viaq/vector
+	branch = release-6.0
+[submodule "log-collection/cluster-logging-operator"]
+	path = log-collection/cluster-logging-operator
+	url = https://github.com/jcantrill/cluster-logging-operator
+	branch = release-6.0
