@@ -23,8 +23,8 @@ ENV PATH=$CARGO_HOME/bin:$PATH
 
 RUN mkdir -p /src
 
-WORKDIR vector/src
-COPY . /src
+WORKDIR /src
+COPY ./vector /src/
 
 RUN PROTOC=/src/thirdparty/protoc/protoc-linux-$(arch) make build
 
