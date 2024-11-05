@@ -1,17 +1,18 @@
+# added note to make unique
 annotations:
-  containerImage: quay.io/openshift-logging/vector:6.0
+  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:cca08564ec142d58885d9ea054d2c6af929a421335e3a4e1725cb8321da155ec
 containers: 
-- image:quay.io/openshift-logging/vector:6.0
+- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:cca08564ec142d58885d9ea054d2c6af929a421335e3a4e1725cb8321da155ec
   name: cluster-logging-operator
   env:
   - name: RELATED_IMAGE_VECTOR
-    value: quay.io/openshift-logging/vector:6.0 
+    value: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:fdbed980cec2f5a561c26eeddaf76ff03cbbfe2fbc216e3c661ea4b68024ee9c
   - name: RELATED_IMAGE_LOG_FILE_METRIC_EXPORTER
-    value: quay.io/openshift-logging/log-file-metric-exporter:6.0
+    value: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:110b545b055d40a307cbbdce1a65ac13cf4806d5b858bcae3b0a4e6b50b8472b
 releatedImages:
-- image: quay.io/openshift-logging/vector:6.0
+- image: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:fdbed980cec2f5a561c26eeddaf76ff03cbbfe2fbc216e3c661ea4b68024ee9c
   name: vector
-- image: quay.io/openshift-logging/log-file-metric-exporter:6.0 
+- image: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:110b545b055d40a307cbbdce1a65ac13cf4806d5b858bcae3b0a4e6b50b8472b
   name: log-file-metric-exporter
 version: 6.0.0
 packageName: cluster-logging
