@@ -1,20 +1,17 @@
-# operatorImages are the set of named container images that are part of the
-# operator deployment
 annotations:
-  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:c103a5aa1c10996bb638a8a72262d557e8cc41dde936bba54e967b2af2298a81
+  containerImage: quay.io/openshift-logging/vector:6.0
 containers: 
-- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:c103a5aa1c10996bb638a8a72262d557e8cc41dde936bba54e967b2af2298a81
+- image:quay.io/openshift-logging/vector:6.0
   name: cluster-logging-operator
   env:
   - name: RELATED_IMAGE_VECTOR
-    value: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:f7039c1046e42c8e1b9b4340bdb42c07b04db281a39f2c7b9ab20eb068267bd7 
+    value: quay.io/openshift-logging/vector:6.0 
   - name: RELATED_IMAGE_LOG_FILE_METRIC_EXPORTER
-    value: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:7ed339ed6a7560eb7999a17d2c3199bb143e95ecbbac0bac6eedd8b3bb83f94e
-# relatedImages are the set of related images defined in the CSV
+    value: quay.io/openshift-logging/log-file-metric-exporter:6.0
 releatedImages:
-- image: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:f7039c1046e42c8e1b9b4340bdb42c07b04db281a39f2c7b9ab20eb068267bd7 
+- image: quay.io/openshift-logging/vector:6.0
   name: vector
-- image: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:7ed339ed6a7560eb7999a17d2c3199bb143e95ecbbac0bac6eedd8b3bb83f94e 
+- image: quay.io/openshift-logging/log-file-metric-exporter:6.0 
   name: log-file-metric-exporter
 version: 6.0.0
 packageName: cluster-logging
