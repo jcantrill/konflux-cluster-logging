@@ -24,9 +24,9 @@ spec:
   - name: output-image
     value: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-bundle-v6-0:{{revision}}
   - name: dockerfile
-    value: log-collection/cluster-logging-operator/bundle.Dockerfile
+    value: Dockerfile.bundle-clo
   - name: path-context
-    value: log-collection/cluster-logging-operator
+    value: ""
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while maintaining trust after pipeline customization.
