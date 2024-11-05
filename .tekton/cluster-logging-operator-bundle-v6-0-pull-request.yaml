@@ -11,7 +11,7 @@ metadata:
       == "release-6.0" && ( "log-collection/cluster-logging-operator/***".pathChanged()
       || ".tekton/cluster-logging-operator-bundle-v6-0-pull-request.yaml".pathChanged()
       || "Dockerfile.bundle-clo".pathChanged()
-      || "variables.yaml".pathChanged()
+      || "log-collection/variables.yaml".pathChanged()
       )
   creationTimestamp: null
   labels:
