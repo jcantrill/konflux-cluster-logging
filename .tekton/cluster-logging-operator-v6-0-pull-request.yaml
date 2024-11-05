@@ -9,8 +9,9 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch
       == "release-6.0" && ( "log-collection/cluster-logging-operator/***".pathChanged()
-      || ".tekton/cluster-logging-operator-v6-0-pull-request.yaml".pathChanged() ||
-      "log-collection/cluster-logging-operator/Dockerfile".pathChanged() )
+      || ".tekton/cluster-logging-operator-v6-0-pull-request.yaml".pathChanged() 
+      || "log-collection/cluster-logging-operator/Dockerfile".pathChanged() 
+      )
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: cluster-logging-operator-v6-0
