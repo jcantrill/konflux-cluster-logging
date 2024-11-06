@@ -1,8 +1,8 @@
 # added note to make unique
 annotations:
-  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:87f92db06ad7fb5d6e7a694776fda0d1ee268fa7e920da2f25544f069ad3599e
+  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:66ea88f44109d740b79e090345f1a7a2e0f2f739e72fcc3de2cf85a4fac67df9
 containers: 
-- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:87f92db06ad7fb5d6e7a694776fda0d1ee268fa7e920da2f25544f069ad3599e
+- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:66ea88f44109d740b79e090345f1a7a2e0f2f739e72fcc3de2cf85a4fac67df9
   name: cluster-logging-operator
   env:
   - name: RELATED_IMAGE_VECTOR
