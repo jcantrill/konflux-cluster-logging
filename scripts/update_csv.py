@@ -1,4 +1,4 @@
-import os
+import os, re
 from collections import OrderedDict
 from sys import exit as sys_exit
 from sys import stdout
@@ -32,6 +32,14 @@ def get_container(containers_array, container_name):
 csv_file = os.getenv('CSV_FILE')
 upstream_csv = load_manifest(csv_file)
 
+def replaces(version, patches):
+    replace = patches.get('replaces')
+    if replace is None:
+        ver = re.match(r'(?P<major>\d*)\.(?P<minor>\d*)\.(?P<patch>\d*)(-[\w\.]*)?(\+[\w\.]*)?', version)
+        if int(ver.group('patch')) > 0:
+            replace = "%s.%s.%s" % (ver.group('major'),ver.group('minor'),int(ver.group('patch')) -1)
+    return replace
+
 with open(os.getenv('VARS_FILE')) as pf:
     patches = yaml.load(pf)
     
@@ -41,10 +49,14 @@ with open(os.getenv('VARS_FILE')) as pf:
         upstream_annotations[key] =  patches['annotations'][key]
     
     #update versions
-    print("Patching metadata.name, spec.version, olm.skipRange using version:", patches['version'])
-    upstream_csv['metadata']['name'] = "%s.v%s" % (patches['packageName'], patches['version'])
-    upstream_csv['spec']['version'] =  patches['version']
-    upstream_annotations['olm.skipRange'] = "%s <%s" % (patches['skipRange']['min'], patches['version'])
+    version = patches['version']
+    print("Patching metadata.name, spec.version, olm.skipRange using version:", version)
+    upstream_csv['metadata']['name'] = "%s.v%s" % (patches['packageName'], version)
+    upstream_csv['spec']['version'] =  version
+    upstream_annotations['olm.skipRange'] = "%s <%s" % (patches['skipRange']['min'], version)
+    replace = replaces(version, patches)
+    if replace is not None:
+        upstream_csv['spec']['replaces']= replaces(version, patches)
 
     # update deployed container spec
     upstream_containers = upstream_csv['spec']['install']['spec']['deployments'][0]['spec']['template']['spec']['containers']
