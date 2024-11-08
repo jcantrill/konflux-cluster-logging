@@ -1,5 +1,6 @@
 FROM registry.access.redhat.com/ubi9/ubi:9.4 as builder
 
+ENV ANNOTATIONS_FILE=/metadata/annotations.yaml
 ENV CSV_FILE=/manifests/cluster-logging.clusterserviceversion.yaml
 ENV VARS_FILE=/variables.yaml
 
