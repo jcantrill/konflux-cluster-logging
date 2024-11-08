@@ -1,7 +1,6 @@
 # added note to make unique
 annotations:
   containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:ac40eb3378627f430509d5e9140092259040eeed4dd0ef9c89a02481a4d4a0fc
-  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:66ea88f44109d740b79e090345f1a7a2e0f2f739e72fcc3de2cf85a4fac67df9
   com.redhat.delivery.operator.bundle: true
   com.redhat.openshift.versions: "v4.14-v4.17"
   operators.operatorframework.io.bundle.package.v1: cluster-logging
@@ -20,7 +19,7 @@ releatedImages:
   name: vector
 - image: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:c42e50ab6922647e539baf084e0fb94d7e1327aaea5f879b67a86e1e3f5c2e8f
   name: log-file-metric-exporter
-version: 6.0.0-pretest1
+version: 6.0.2-pretest1
 packageName: cluster-logging
 skipRange:
   min: '>=5.8.0-0'
