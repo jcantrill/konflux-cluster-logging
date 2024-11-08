@@ -11,11 +11,11 @@ containers:
   name: cluster-logging-operator
   env:
   - name: RELATED_IMAGE_VECTOR
-    value: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:84e9a9153517cdf041a062c8cd7a6497d49cc959409db9586a77faca448868c1
+    value: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:f156c01ebcdc7216827739d492c480c9f2b2babf326c9f61aa3019d39c990418
   - name: RELATED_IMAGE_LOG_FILE_METRIC_EXPORTER
     value: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:c42e50ab6922647e539baf084e0fb94d7e1327aaea5f879b67a86e1e3f5c2e8f 
 releatedImages:
-- image: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:84e9a9153517cdf041a062c8cd7a6497d49cc959409db9586a77faca448868c1
+- image: quay.io/redhat-user-workloads/jcantril-tenant/vector-v6-0@sha256:f156c01ebcdc7216827739d492c480c9f2b2babf326c9f61aa3019d39c990418
   name: vector
 - image: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:c42e50ab6922647e539baf084e0fb94d7e1327aaea5f879b67a86e1e3f5c2e8f
   name: log-file-metric-exporter
