@@ -20,7 +20,7 @@ releatedImages:
   name: vector
 - image: quay.io/redhat-user-workloads/jcantril-tenant/log-file-metric-exporter-v6-0@sha256:c42e50ab6922647e539baf084e0fb94d7e1327aaea5f879b67a86e1e3f5c2e8f
   name: log-file-metric-exporter
-version: 6.0.0-pretest1
+version: 6.0.2-pretest1
 packageName: cluster-logging
 skipRange:
   min: '>=5.8.0-0'
