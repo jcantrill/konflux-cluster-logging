@@ -1,13 +1,13 @@
 # added note to make unique
 annotations:
-  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:8b5ee771f4a7b14339f5216bee1e48ca419dc3e146e8cffa0b9c481b18078c19
+  containerImage: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:35df8020f2ffb3e0471e853b9e4c57332f5aec121290564e48ae914ff70d0880
   com.redhat.delivery.operator.bundle: "true"
   com.redhat.openshift.versions: "v4.14-v4.17"
   operators.operatorframework.io.bundle.package.v1: cluster-logging
   operators.operatorframework.io.bundle.channel.default.v1: stable-6.0
   operators.operatorframework.io.bundle.channel.v1: stable-6.0
 containers: 
-- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:8b5ee771f4a7b14339f5216bee1e48ca419dc3e146e8cffa0b9c481b18078c19
+- image: quay.io/redhat-user-workloads/jcantril-tenant/cluster-logging-operator-v6-0@sha256:35df8020f2ffb3e0471e853b9e4c57332f5aec121290564e48ae914ff70d0880
   name: cluster-logging-operator
   env:
   - name: RELATED_IMAGE_VECTOR
