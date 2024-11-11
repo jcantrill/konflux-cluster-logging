@@ -31,7 +31,7 @@ LABEL operators.operatorframework.io.metrics.project_layout=go.kubebuilder.io/v4
 COPY --from=builder /manifests /manifests
 COPY --from=builder /metadata /metadata
 
-LABEL com.redhat.delivery.operator.bundle=true
+LABEL com.redhat.delivery.operator.bundle="true"
 LABEL com.redhat.openshift.versions="v4.14-v4.17"
 
 LABEL \
